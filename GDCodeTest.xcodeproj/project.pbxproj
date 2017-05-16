@@ -20,6 +20,7 @@
 		1241E7F01EC98706004B9DDD /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241E7EE1EC97EA3004B9DDD /* SearchRequest.swift */; };
 		127D2F5F1ECB983100252C1E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D2F5E1ECB983100252C1E /* LocalStorage.swift */; };
 		127D2F601ECB98A800252C1E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D2F5E1ECB983100252C1E /* LocalStorage.swift */; };
+		127D2F631ECBA25100252C1E /* LocalStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D2F621ECBA25100252C1E /* LocalStorageTest.swift */; };
 		12CF35E61EC8D80600359543 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF35DC1EC8D80600359543 /* AccessToken.swift */; };
 		12CF35E71EC8D80600359543 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF35DD1EC8D80600359543 /* ApiService.swift */; };
 		12CF35EA1EC8D80600359543 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12CF35E01EC8D80600359543 /* Base.lproj */; };
@@ -87,6 +88,7 @@
 		1241E7EB1EC8FE91004B9DDD /* AuthenticationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationHandler.swift; sourceTree = "<group>"; };
 		1241E7EE1EC97EA3004B9DDD /* SearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		127D2F5E1ECB983100252C1E /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		127D2F621ECBA25100252C1E /* LocalStorageTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageTest.swift; sourceTree = "<group>"; };
 		12CF35DC1EC8D80600359543 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		12CF35DD1EC8D80600359543 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		12CF35DE1EC8D80600359543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				123DAC5E1EC64D9300E4FA4B /* Info.plist */,
+				127D2F621ECBA25100252C1E /* LocalStorageTest.swift */,
 				12EB3F351EC75D8700BD51F0 /* ApiServiceTest.swift */,
 				1241E7E91EC8EFFE004B9DDD /* ModelsTest.swift */,
 			);
@@ -259,10 +262,10 @@
 		12CF35F11EC8D81500359543 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				127D2F5E1ECB983100252C1E /* LocalStorage.swift */,
 				12CF35F21EC8D82700359543 /* entities */,
 				12CF35F01EC8D80B00359543 /* integration */,
 				12CF35E11EC8D80600359543 /* Constants.swift */,
+				127D2F5E1ECB983100252C1E /* LocalStorage.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				1241E7EA1EC8EFFE004B9DDD /* ModelsTest.swift in Sources */,
 				12CF35F61EC8D86A00359543 /* Username.swift in Sources */,
 				12CF35F51EC8D86600359543 /* Profile.swift in Sources */,
+				127D2F631ECBA25100252C1E /* LocalStorageTest.swift in Sources */,
 				1241E7ED1EC8FF25004B9DDD /* AuthenticationHandler.swift in Sources */,
 				12EB3F361EC75D8700BD51F0 /* ApiServiceTest.swift in Sources */,
 				12CF35F71EC8D86D00359543 /* Location.swift in Sources */,
