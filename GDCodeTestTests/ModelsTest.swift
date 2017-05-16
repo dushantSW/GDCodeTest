@@ -99,13 +99,13 @@ class ModelsTest: XCTestCase {
     }
     
     func test_zeroLatLocation() {
-        XCTAssertThrowsError(try Location.ofLocation(latitude: 0, longitude: 0)) { (error) in
+        XCTAssertThrowsError(try Location.ofLocation(latitude: Double.nan, longitude: Double.nan)) { (error) in
             XCTAssertEqual(error as? LocationError, LocationError.latIsEmpty)
         }
     }
     
     func test_zeroLongLocation() {
-        XCTAssertThrowsError(try Location.ofLocation(latitude: 13.23, longitude: 0)) { (error) in
+        XCTAssertThrowsError(try Location.ofLocation(latitude: 13.23, longitude: Double.nan)) { (error) in
             XCTAssertEqual(error as? LocationError, LocationError.longIsEmpty)
         }
     }
