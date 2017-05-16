@@ -28,17 +28,15 @@ public class LocalStorage {
         self.userDefaults.set(jsonToken, forKey: Keys.accessToken)
     }
     
-    
-    /// Retrieves the stored access token if exists
+    /// Retreives the tokens from the local storage if exists.
     ///
-    /// - Returns: AccessToken or nil
-    /// - Throws: AccessTokenError
+    /// - Returns: AccessToken if exists
     func getAccessToken() throws -> AccessToken? {
-        let json = self.userDefaults.dictionary(forKey: Keys.accessToken)
-        if json == nil {
+        let jsonToken = self.userDefaults.dictionary(forKey: Keys.accessToken)
+        if jsonToken == nil {
             return nil
         }
         
-        return try AccessToken.ofJSON(json: json! as NSDictionary)
+        return try AccessToken.ofJSON(json: jsonToken! as NSDictionary)
     }
 }

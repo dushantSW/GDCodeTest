@@ -64,6 +64,7 @@ class AuthenticationHandler: RequestAdapter, RequestRetrier {
                     
                     if let accessToken = _accessToken {
                         strongSelf.accessToken = accessToken
+                        LocalStorage.sharedStorage.storeAccessToken(token: accessToken)
                     }
                     
                     strongSelf.requestsToRetry.forEach { $0(succeeded, 0.0) }

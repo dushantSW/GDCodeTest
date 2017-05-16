@@ -19,16 +19,16 @@ class Profile {
         static let distance = "Distance"
     }
     
-    var id: Int?
-    var name: String?
-    var age: Int?
-    var type: Int?
-    var avatarId: String?
+    var id: Int!
+    var name: String!
+    var age: Int!
+    var type: Int!
+    var avatarId: String!
 
-    var travelling: Bool?
-    var online: Bool?
-    var isFavourite: Bool?
-    var distance: Bool?
+    var travelling: Bool!
+    var online: Bool!
+    var isFavourite: Bool!
+    var distance: String!
     
     
     /// Creates a new instance with json data
@@ -42,7 +42,7 @@ class Profile {
         self.avatarId = json?.value(forKey: JSONFieldKey.avatarId) as? String
         self.travelling = json?.value(forKey: JSONFieldKey.travelling) as? Bool
         self.online = json?.value(forKey: JSONFieldKey.online) as? Bool
-        self.distance = json?.value(forKey: JSONFieldKey.distance) as? Bool
+        self.distance = json?.value(forKey: JSONFieldKey.distance) as? String
     }
 
     

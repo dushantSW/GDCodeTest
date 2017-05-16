@@ -15,7 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Create auth handler for adapter and retrier
+        do {
+            let username = try Username.ofName(name: "oojamaflip2008")
+            let password = try Password.ofValue(value: "TestPassword123!")
+            var accessToken: AccessToken? = try LocalStorage.sharedStorage.getAccessToken()
+            if accessToken == nil {
+                accessToken = try AccessToken.ofValues(token: "123124nobsdbsodgsodgsoigsdgsdoo2342o3423h4oiodsfosdgoisgosdsfsfsdf", expires: 24 * 60 * 60)
+            }
+            let authHandler = AuthenticationHandler.init(username: username, password: password, accessToken: accessToken!)
+            
+            ApiService.sharedService.session.adapter = authHandler
+            ApiService.sharedService.session.retrier = authHandler
+        } catch {
+            print("Error occured while creating username & password")
+        }
+        
         return true
     }
 

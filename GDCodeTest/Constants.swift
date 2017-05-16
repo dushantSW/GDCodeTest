@@ -30,4 +30,14 @@ class Constants {
      * URL to the media endpoint
      */
     static let MEDIA_URL = "https://media-live.cpcconnect.net/media/";
+    
+    /**
+     * Creates an absolute url from media id
+     * 
+     * @param mediaId String mediaId
+     * @returns Absolute URL to the media.
+     */
+    public static func mediaAbsURLWithMediaId(mediaId: String) -> String {
+        return MEDIA_URL.appending(mediaId).appending("/cropped?size=350&croppingScheme=0")
+    }
 }
