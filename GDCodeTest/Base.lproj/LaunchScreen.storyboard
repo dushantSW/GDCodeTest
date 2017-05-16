@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GDCodeTest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-Kg-dmt">
-                                <rect key="frame" x="40" y="304" width="295.5" height="59"/>
+                                <rect key="frame" x="40.5" y="304" width="295.5" height="59"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.75686274509999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vBT-Kg-dmt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="W87-fy-puZ"/>
                             <constraint firstItem="vBT-Kg-dmt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="y3u-0b-W9S"/>
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="-234" y="300"/>
         </scene>
     </scenes>
 </document>
