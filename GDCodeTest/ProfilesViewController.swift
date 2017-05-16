@@ -26,6 +26,7 @@ class ProfilesViewController: UIViewController {
     @IBOutlet weak var firstImageView: ProfileImageView!
     @IBOutlet weak var secondImageView: ProfileImageView!
     
+    // Mark: - Life-cycle views
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -44,6 +45,10 @@ class ProfilesViewController: UIViewController {
         self.loadCurrentProfile()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - IBActions
     @IBAction func onLikeButtonTapped(_ sender: Any) {
         // TODO: Go to next profile
@@ -52,8 +57,7 @@ class ProfilesViewController: UIViewController {
     }
     
     @IBAction func onCloseButtonTapped(_ sender: Any) {
-        // TODO: Throw this profile
-        
+        firstImageView.animate()
         self.loadCurrentProfile()
     }
     
@@ -67,6 +71,9 @@ class ProfilesViewController: UIViewController {
             distanceTextView.text = currentProfile?.distance
             onlineStatusTextView.text = (currentProfile?.online)! ? "Online" : "Offline"
             firstImageView.loadImageWithMediaId(mediaId: (currentProfile?.avatarId!)!)
+            
+            let nextProfile: Profile = self.profiles[self.currentIndex + 1]
+            secondImageView.loadImageWithMediaId(mediaId: nextProfile.avatarId)
         }
     }
     
