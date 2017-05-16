@@ -23,7 +23,7 @@ class ProfilesViewController: UIViewController {
     @IBOutlet weak var likeButton: LikeButton!
     
     // Image views
-    @IBOutlet weak var firstImageView: ProfileImageView!
+    @IBOutlet weak var firstImageView: ProfileImageView! 
     @IBOutlet weak var secondImageView: ProfileImageView!
     
     // Mark: - Life-cycle views
@@ -57,7 +57,6 @@ class ProfilesViewController: UIViewController {
     }
     
     @IBAction func onCloseButtonTapped(_ sender: Any) {
-        firstImageView.animate()
         self.loadCurrentProfile()
     }
     
