@@ -59,7 +59,8 @@ class LoadingViewController : UIViewController, CLLocationManagerDelegate {
     
     // Mark: - Location manager delegate
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        let controller = ViewUtils.showErrorAlert(title: "", message: "")
+        let controller = ViewUtils.showErrorAlert(title: "error_title_location_services_failed",
+                                                  message: "error_message_location_services_failed")
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -74,7 +75,8 @@ class LoadingViewController : UIViewController, CLLocationManagerDelegate {
                 longitude: Double(coord.longitude))
             loadProfiles(location: location)
         } catch {
-            let controller = ViewUtils.showErrorAlert(title: "", message: "")
+            let controller = ViewUtils.showErrorAlert(title: "error_title_location_not_parsed",
+                                                      message: "error_message_location_not_parsed")
             self.present(controller, animated: true, completion: nil)
         }
         
@@ -101,7 +103,8 @@ class LoadingViewController : UIViewController, CLLocationManagerDelegate {
         }) { [weak self] statusCode, response, error in
             guard let strongSelf = self else { return }
             
-            let controller = ViewUtils.showErrorAlert(title: "", message: "")
+            let controller = ViewUtils.showErrorAlert(title: "error_title_profiles_load_failed",
+                                                      message: "error_message_profiles_load_failed")
             strongSelf.present(controller, animated: true, completion: nil)
             strongSelf.loading = false
             

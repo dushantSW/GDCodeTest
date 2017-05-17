@@ -1,0 +1,7 @@
+"error_title_location_services_failed"="Location Services";
+"error_title_location_not_parsed"="Location Services";
+"error_title_profiles_load_failed"="Profiles";
+
+"error_message_location_services_failed"="Provide location permission";
+"error_message_location_not_parsed"="Location could not be read";
+"error_message_profiles_load_failed"="Profiles could not be loaded";
