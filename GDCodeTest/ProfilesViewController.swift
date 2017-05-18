@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 
+
+/// ProfilesViewController, UIViewController for viewing profiles.
 class ProfilesViewController: UIViewController {
     var profiles: [Profile]!
     private var currentProfile: Profile!

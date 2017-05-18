@@ -10,7 +10,14 @@ import Foundation
 import UIKit
 import SDWebImage
 
+
+/// ProfilesImageView extends UIImageView with custom loading and overlay.
 public class ProfileImageView : UIImageView {
+    
+    
+    /// Asynchorounsly loads images from the given mediaId
+    ///
+    /// - Parameter mediaId: id of the image
     public func loadImageWithMediaId(mediaId: String) {
         let absURL = Constants.mediaAbsURLWithMediaId(mediaId: mediaId)
         self.sd_setImage(with: URL(string: absURL)) { [weak self] image, error, cacheType, url in
@@ -21,6 +28,7 @@ public class ProfileImageView : UIImageView {
     }
 }
 
+// MARK: - Extension UIImage
 private extension UIImage {
     func filledImage(fillColor: UIColor, alpha: CGFloat) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, UIScreen.main.scale)

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// LikeButton extended UIButton with custom style for like button.
 public class LikeButton : UIButton {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

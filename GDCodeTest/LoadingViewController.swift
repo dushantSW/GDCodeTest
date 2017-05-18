@@ -11,6 +11,7 @@ import UIKit
 import CoreLocation
 
 
+/// LoadingViewController, UIViewController for loading profiles and reading location.
 class LoadingViewController : UIViewController, CLLocationManagerDelegate {
     private var locationManager: CLLocationManager!
     private var profiles: [Profile]!
